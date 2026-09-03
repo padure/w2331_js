@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Laborator 1</title>
+    <!-- Extern -->
+    <link rel="stylesheet" href="./app.css">
+    <style>
+        /* Intern */
+        h1{
+            color: blue;
+        }
+    </style>
+    <!-- Script -->
+     <script>
+        window.alert("Salut din Head!");
+     </script>
 </head>
 <body>
-    
+    <!-- Inline -->
+    <h1 style="color: orange;">Laborator 1</h1>
+
+    <button onclick="window.alert('Salut din inline!');">Click</button>
+
+    <!-- Script -->
+     <script>
+        window.alert("Salut din Body!");
+     </script>
+     <script src="./app.js"></script>
 </body>
 </html>
