@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 5</title>
+</head>
+<body>
+    <script>
+        const str = prompt("Scrie stringul necesar!");
+        const strTLC = str.toLowerCase();
+        let result = "";
+        
+        for(let i = 0; i < strTLC.length; i++){
+            let count = 0;
+            if(!result.includes(strTLC[i]) && strTLC[i] != " "){
+                for(let j = 0; j < strTLC.length; j++){
+                    if(strTLC[i] == strTLC[j]) count++;
+                }
+                result += strTLC[i];
+                console.log(`Caracterul: ${strTLC[i]} are ${count}!`);
+            }
+        }
+    </script>
+</body>
+</html>
