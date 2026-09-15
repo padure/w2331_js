@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 2</title>
+</head>
+<body>
+    <script>
+        let suma = 0;
+        const i = Number(prompt("Cate numere vrei sa introduci ?"));
+        for (let n = 0; n < i; n++) {
+            const numar = Number(prompt("Scrie numarul."));
+            suma += numar;
+        } 
+        let media = suma / i;
+        alert(`Suma numerelor este: ${suma}, media este: ${media}`);
+    </script>
+</body>
+</html>

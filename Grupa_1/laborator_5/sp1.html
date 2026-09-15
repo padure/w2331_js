@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcinia practica 1</title>
+</head>
+<body>
+    <script>
+        //Generam numarul de runde
+        const runde = Number( prompt("Scrie numarul de runde:") );
+        let scor = 0;
+        //Parcurgem prin fiecare runda
+        for (let i = 1; i <= runde; i++) {
+            //Generam un numar aleator
+            const element = Math.floor( Math.random() * 100 ) + 1;
+            const tipNumar = confirm("Numarul este par sau impar?");
+            const tipElement = element % 2 == 0;
+            if(tipNumar == tipElement){
+                scor++;
+                alert("Ai ghicit!");
+            }else{
+                alert("Nu ai ghicit!");
+            }
+        }
+        //Afisare rezultat
+        alert(`Ai ghicit: ${scor} numere!`);
+    </script>
+</body>
+</html>
