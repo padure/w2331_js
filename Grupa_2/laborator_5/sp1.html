@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 1</title>
+</head>
+<body>
+    <script>
+        let stare = true;
+        let scor = 0;
+        let numar;
+        while(stare){
+            numar = Math.floor( Math.random() * 100 ) + 1;
+            const tipNumar = confirm("Numarul este par sau impar?");
+            const isPar = numar % 2 == 0;
+            scor++;
+            if(tipNumar == isPar){
+                stare = false;
+                break;
+            }
+            alert("Mai incearca!");
+        }
+        alert(`Ai ghicit! Numarul a fost: ${numar}. Din ${scor} incercari`);
+    </script>
+</body>
+</html>

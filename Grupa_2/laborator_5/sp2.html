@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 2</title>
+</head>
+<body>
+    <script>
+        let loop = Number( prompt("Scrie numarul de numere dorite!") );
+        let suma = 0;
+        let numar;
+        let max = 0, min = 1000000;
+
+        for(let i = 0; i < loop; i++){
+            numar = Number( prompt(`Scrie numarul ${i+1}:`) );
+            suma += numar;
+            if(numar > max) max = numar;
+            if(numar < min) min = numar;
+        }
+        
+        alert(`Suma numerelor este: ${suma}. Media numerelor este: ${suma/loop}`);
+        alert(`Numarul maxim este: ${max}. Numarul minim este: ${min}`);
+    </script>
+</body>
+</html>

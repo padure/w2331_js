@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 3</title>
+</head>
+<body>
+    <script>
+        let stare = true;
+        let scor = 0;
+        let numar = Number( prompt("Scrie un numar din intervalul 1 - 6") );
+        do {
+            let zar = Math.floor( Math.random() * 10 ) + 1;
+            while(zar > 6){
+                zar = Math.floor( Math.random() * 10 ) + 1;
+            }
+            scor++;
+            if(numar == zar){
+                stare = false;
+                console.log(zar);
+                alert(`Ai ghicit numarul: ${zar} din ${scor} incercari!`);
+                break;
+            }else{
+                console.log(zar);
+                zar = Math.floor( Math.random() * 10 ) + 1;
+            }
+        } while (stare);
+    </script>
+</body>
+</html>
