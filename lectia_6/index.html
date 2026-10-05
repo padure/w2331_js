@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectia 6</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div id="cards" class="w-2/3 m-auto border border-slate-500 p-2 mt-10 bg-slate-200 flex gap-5"></div>
+    <script>
+        const colors = [
+            "red", "orange", "blue", "black", "lime"
+        ];
+        // const result = colors.forEach( (color, pozitie) => {
+        //     if(pozitie % 2 == 0) console.log(pozitie, color, color.length);
+        // } );
+        const cardsElement = document.getElementById("cards");   
+        colors.map( (color) => {
+            cardsElement.innerHTML += `<div class='p-2 flex items-center justify-center text-4xl text-slate-50 bg-slate-700 w-[200px] h-[200px]'>${color}</div>`;
+        } );
+    </script>
+</body>
+</html>

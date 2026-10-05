@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema nr. 2</title>
+</head>
+<body>
+    <script>
+        const ariaDreptunghiului = function(lungime, latime){
+            return lungime * latime;
+        }
+        const perimetrulDreptunghiului = function(lungime, latime){
+            return 2 * (lungime + latime);
+        }
+        const afiseazaDateDreptunghi = function(lungime, latime){
+            console.log("Lungimea este: " + lungime);
+            console.log("Latimea este: " + latime);
+            console.log("Perimetrul este: " + perimetrulDreptunghiului(lungime, latime));
+            console.log("Aria este: " + ariaDreptunghiului(lungime, latime));
+        }
+
+        afiseazaDateDreptunghi(8, 5);
+    </script>
+</body>
+</html>
