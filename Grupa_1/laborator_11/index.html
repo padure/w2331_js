@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator 11</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main class="mx-30 bg-lime-50 p-2 mt-12">
+        <h2 class="text-center font-bold text-2xl">Lista utilizatorilor initiali</h2>
+        <section id="users"></section>
+        
+        <h2 class="text-center font-bold text-2xl">
+            Lista utilizatorilor sortati crescator
+        </h2>
+        <section id="sort_users"></section>
+        <!-- Sectiunea 3 -->
+        <h2 class="text-center font-bold text-2xl">
+            Lista produselor
+        </h2>
+        <section id="products" class="flex flex-wrap gap-3 grow"></section>
+    </main>
+    <script type="module">
+        import products from "./js/data.js";
+        //Sectiunea 1
+        const users = [
+            "John Doe",
+            "Michael Smith",
+            "Emma Johnson",
+            "Daniel Brown",
+            "Sophia Davis",
+            "James Wilson",
+            "Olivia Miller",
+            "David Moore",
+            "Emily Taylor",
+            "Christopher Anderson"
+        ];
+        const usersSection = document.getElementById("users");
+        users.map( user => {
+            usersSection.innerHTML += `<div class='p-1 m-1 bg-lime-700 text-lime-100'>
+                ${user}
+                </div>`;
+            } );
+        //Sectiunea 2
+        const sortUsers = [...users];
+        const sortUsersSection = document.getElementById("sort_users");
+        sortUsers.sort();
+        sortUsers.map( user => {
+            sortUsersSection.innerHTML += `<div class'bg-white p-1 m-1'>${user}</div>`
+        } );
+        //Sectiunea 3
+        const productsSection = document.getElementById('products');
+        products.map( product => {
+            productsSection.innerHTML += `<div class='p-2 flex flex-col bg-lime-500 w-[200px]'>
+                <h2>Nume: ${product.nume}</h2>
+                <h2>Categorie: ${product.categorie}</h2>
+                <h2>Pret: ${product.pret}</h2>
+                <h2>Cantitate: ${product.cantitate}</h2>
+            </div>`
+        } );
+    </script>
+</body>
+
+</html>
