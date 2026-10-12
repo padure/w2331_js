@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experii regulate</title>
+</head>
+<body>
+    <script>
+        // Exemplul 1
+        let text = "Eu invat javascript si Node.js";
+        const regula = /node/i;
+        const regulaClasa = new RegExp("node", "i");
+        console.log( regula.test( text ) );
+        console.log( regulaClasa.test( text ) );
+        // Exemplul 2
+        // let grupa = prompt("Scrie numele grupei!");
+        // const regulaGrupa = /^W\d{4}$/;
+        // let response = regulaGrupa.test(grupa);
+        // if(response){
+        //     alert(`Ai scris numele corect: ${grupa}`);
+        // } else{
+        //     alert(`Scrie corect numele!`);
+        // }
+        //Exemplul 3
+        let continut = "Eu invat WEB deoarece este un domeniu modern si placut. Web raspunde de aplicatii de la distanta";
+        const regulaCautare = /web/gi;
+
+        let raspuns = continut.matchAll( regulaCautare );
+
+        console.log([...raspuns]);
+
+        //Exemplul 4
+        const mesaj = "Grupa W-2431 participa la laborator. W-2431 este alcatuita din 34 elevi.";
+        const cod = /W-(\d{4})/gi;
+        
+        raspuns = cod.exec( mesaj );
+
+        console.log( raspuns );
+        //Exercitiul 1 
+        const numar = "+37378221133";
+        const regulaNumar = /^\+37379|\+37378\d{6}$/;
+
+        console.log(regulaNumar.test(numar));
+    </script>
+</body>
+</html>
