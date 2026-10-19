@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructurizarea tablourilor</title>
+</head>
+<body>
+    <script>
+        const numere = [25, 78, 4, 2026];
+        let [primul, , , ultimul] = numere;
+        console.log(primul);
+        console.log(ultimul);
+        const frontend = ["HTML", "CSS", "JS"];
+        const backend = ["PHP", "C#", "Java", "Python"];
+        const fullstack = [...frontend, ...backend];
+        console.log(fullstack);
+        //Problema 31
+        const elemente = [
+            { nume: "John", age: 25 },
+            { nume: "Alin", age: 15 }
+        ];
+        const [pers1, pers2] = elemente;
+        console.log(pers1.nume);
+        console.log(pers2.nume);
+        //Problema 33
+        function elementeUnice(lista1, lista2) {
+            return [...new Set([...lista1, ...lista2]) ];
+        }
+
+        console.log( elementeUnice([1, 2, 3], [2, 3, 4]) );
+    </script>
+</body>
+</html>
