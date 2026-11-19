@@ -19,7 +19,21 @@
         </section>
     </main>
     <script>
+        // Elements
+        const booksSection = document.getElementById("books");
+        const URL = "http://localhost:3000/books";
+        // Functions
+        const display = () => {}
+        const getBooks = async () => {
+            const response = await fetch(URL);
+            const books = await response.json();
+            return books;
+        }
+        // Main
+        const main = () => {
 
+        }
+        main();
     </script>
 </body>
 </html>
