@@ -33,3 +33,14 @@ nav a:hover{
     transform: translateY(1px);
 }
 
+#books{
+    padding: 5px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#books > div{
+    border: 1px solid white;
+    padding: 2px;
+}
