@@ -10,6 +10,9 @@ main{
     width: 900px;
     border: 1px solid white;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 nav{
     display: flex;
@@ -18,4 +21,12 @@ nav{
     gap: 5px;
     height: 8dvh;
     border: 1px solid white;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+nav a:hover{
+    transform: translateY(1px);
 }
