@@ -1,0 +1,139 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "titlu": "Micul Prinț",
+            "autor": "Antoine de Saint-Exupéry",
+            "pagini": 96,
+            "pret": 45.99,
+            "categorie": "Ficțiune",
+            "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
+        },
+        {
+            "id": 2,
+            "titlu": "1984",
+            "autor": "George Orwell",
+            "pagini": 328,
+            "pret": 59.90,
+            "categorie": "Distopie",
+            "img": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
+        },
+        {
+            "id": 3,
+            "titlu": "Harry Potter și Piatra Filozofală",
+            "autor": "J.K. Rowling",
+            "pagini": 352,
+            "pret": 79.99,
+            "categorie": "Fantasy",
+            "img": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=500"
+        },
+        {
+            "id": 4,
+            "titlu": "Crimă și pedeapsă",
+            "autor": "Feodor Dostoievski",
+            "pagini": 576,
+            "pret": 89.50,
+            "categorie": "Literatură clasică",
+            "img": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500"
+        },
+        {
+            "id": 5,
+            "titlu": "Mândrie și prejudecată",
+            "autor": "Jane Austen",
+            "pagini": 432,
+            "pret": 64.99,
+            "categorie": "Romantic",
+            "img": "https://images.unsplash.com/photo-1513001900722-370f803f498d?w=500"
+        },
+        {
+            "id": 6,
+            "titlu": "Atomic Habits",
+            "autor": "James Clear",
+            "pagini": 320,
+            "pret": 95.00,
+            "categorie": "Dezvoltare personală",
+            "img": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500"
+        },
+        {
+            "id": 7,
+            "titlu": "Alchimistul",
+            "autor": "Paulo Coelho",
+            "pagini": 208,
+            "pret": 54.99,
+            "categorie": "Filosofie",
+            "img": "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=500"
+        },
+        {
+            "id": 8,
+            "titlu": "Hobbitul",
+            "autor": "J.R.R. Tolkien",
+            "pagini": 310,
+            "pret": 74.50,
+            "categorie": "Fantasy",
+            "img": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500"
+        },
+        {
+            "id": 9,
+            "titlu": "Sapiens",
+            "autor": "Yuval Noah Harari",
+            "pagini": 512,
+            "pret": 99.99,
+            "categorie": "Istorie",
+            "img": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=500"
+        },
+        {
+            "id": 10,
+            "titlu": "Marele Gatsby",
+            "autor": "F. Scott Fitzgerald",
+            "pagini": 180,
+            "pret": 49.90,
+            "categorie": "Literatură clasică",
+            "img": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=500"
+        },
+        {
+            "id": 11,
+            "titlu": "Dune",
+            "autor": "Frank Herbert",
+            "pagini": 688,
+            "pret": 109.99,
+            "categorie": "Science Fiction",
+            "img": "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=500"
+        },
+        {
+            "id": 12,
+            "titlu": "Fata din tren",
+            "autor": "Paula Hawkins",
+            "pagini": 384,
+            "pret": 69.90,
+            "categorie": "Thriller",
+            "img": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=500"
+        },
+        {
+            "id": 13,
+            "titlu": "Povestea slujitoarei",
+            "autor": "Margaret Atwood",
+            "pagini": 320,
+            "pret": 84.99,
+            "categorie": "Distopie",
+            "img": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
+        },
+        {
+            "id": 14,
+            "titlu": "Inteligența emoțională",
+            "autor": "Daniel Goleman",
+            "pagini": 400,
+            "pret": 89.00,
+            "categorie": "Psihologie",
+            "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500"
+        },
+        {
+            "id": 15,
+            "titlu": "Misterul de la conacul Blackwood",
+            "autor": "Alexandru Popescu",
+            "pagini": 296,
+            "pret": 62.50,
+            "categorie": "Mister",
+            "img": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=500"
+        }
+    ]
+}
