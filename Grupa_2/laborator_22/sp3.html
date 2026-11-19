@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 3</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #f2f6f9;
+        }
+        section{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        textarea{
+            resize: none;
+            border: 1px solid #ebf4fd;
+            width: 60%;
+            height: 5rem;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        #size{
+            background-color: #ebf4fd;
+            color: #246ca7;
+            font-weight: bolder;
+            font-size: 1.4rem;
+            padding: 20px;
+            border: 1px solid #246ca7;
+            border-radius: 10px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Recenzie pentru curs</h1>
+    <section>
+        <textarea name="recenzie" id="recenzie" maxlength="120"></textarea>
+        <div id="size">0 / 120</div>
+    </section>
+    <script>
+        const recenzie = document.getElementById("recenzie");
+        const size = document.getElementById("size");
+
+        recenzie.addEventListener("input", (event) =>{
+            let len = event.target.value.length;
+            size.textContent = `${len} / 120`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 700px;
+            margin: 0 auto;
+            background-color: #EAF2F8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        main > div{
+            border: 1px solid #AFC6D9;
+            background-color: #C5D8E8;
+            box-shadow: 0 2px 8px rgba(50, 80, 110, 0.10);
+            height: 200px;
+            flex: 1 1 32%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            color: #EDE7F6;
+            cursor: pointer;
+            user-select: none;
+        }
+        .suma{
+            width: 700px;
+            margin: 2dvh auto;
+            text-align: center;
+            padding: 5px;
+            font-size: 2.4rem;
+            color: #1E293B;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="suma">
+        Total: <span id="total">0</span>
+    </div>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <script>
+        const div = document.querySelectorAll("main > div");
+        const total = document.querySelector("#total");
+
+        Array.from(div).forEach(card => {
+            card.addEventListener("click", (e) => {
+                let cardNumber = e.target.getAttribute("data-nr") ?? 0;
+                e.target.textContent = ++cardNumber;
+                e.target.setAttribute("data-nr", cardNumber);
+                
+                const numbers = document.querySelectorAll("main > div");
+                let suma = Array.from(numbers).reduce( (acc, val) => {
+                    acc += Number( val.getAttribute("data-nr") ) ?? 0;
+                    return acc;
+                }, 0);
+
+                total.textContent = suma;
+            });
+        });
+    </script>
+</body>
+</html>

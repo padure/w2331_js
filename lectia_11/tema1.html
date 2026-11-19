@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1</title>
+</head>
+<body>
+    <button id="click">
+        Click
+    </button>
+    <script>
+        const btn = document.getElementById("click");
+        //Click
+        btn.addEventListener("click", (event) => {
+            console.log(event.target.textContent);
+        });
+        //DBLClick
+        btn.addEventListener("dblclick", () => {
+            console.log("Dublu click");
+        });
+        //Mouseenter
+        btn.addEventListener("mouseenter", () => {
+            console.log("Mouse enter");
+        });
+        //Click drept
+        btn.addEventListener("contextmenu", () => {
+            console.log("Click drept");
+        });
+
+    </script>
+</body>
+</html>

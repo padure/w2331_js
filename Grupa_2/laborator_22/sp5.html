@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 5</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            margin: 0 30px;
+            padding: 0;
+            background-color: #f8fafc;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        #select{
+            border: 1px solid #e1e8ef;
+            border-radius: 5px;
+            padding: 8px;
+        }
+        label{
+            color: #3983ba;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h4>Selectează un fragment din text</h4>
+    <section>
+        <input type="text" name="select" id="select" value="Fragment selectat">
+        <label for="select" id="rezultat">Selectie:</label>
+    </section>
+    <script>
+        const select    = document.getElementById("select");
+        const rezultat  = document.getElementById("rezultat");
+
+        select.addEventListener("select", (event)=>{
+            let start = select.selectionStart;
+            let end = select.selectionEnd;
+            rezultat.textContent = `Selectie: „${event.target.value.slice(start, end)}”`;
+        });
+    </script>
+</body>
+</html>

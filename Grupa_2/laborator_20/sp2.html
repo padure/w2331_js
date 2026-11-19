@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 900px;
+            margin: 5dvh auto;
+            padding: 2px;
+            background-color: #F1F8DC;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        main .full-img{
+            height: 30dvw;
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(75, 110, 40, 0.12);
+        }
+        #images{
+            display: flex;
+            justify-content: space-between;
+            height: 15dvh;
+            object-fit: cover;
+        }
+        #images > img{
+            width: 18%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="./imagini/img1.jpg" alt="Imaginea 1" class="full-img">
+        <section id="images">
+            <img src="./imagini/img1.jpg" alt="Imaginea 1">
+            <img src="./imagini/img2.jpg" alt="Imaginea 2">
+            <img src="./imagini/img3.jpg" alt="Imaginea 3">
+            <img src="./imagini/img4.jpg" alt="Imaginea 4">
+            <img src="./imagini/img5.jpg" alt="Imaginea 5">
+        </section>
+    </main>
+    <script>
+        const fullImg = document.querySelector(".full-img");
+        const images = document.querySelectorAll("#images > img");
+        Array.from(images).forEach(img => {
+            img.addEventListener('click', () => fullImg.src = img.src);
+        });
+    </script>
+</body>
+</html>

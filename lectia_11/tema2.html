@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2</title>
+</head>
+<body>
+    <button id="click">
+        Click
+    </button>
+    <script>
+        const btn = document.getElementById("click");
+
+        btn.onclick = function(){
+            console.log(this.textContent);
+        }
+        
+        btn.oncontextmenu = function(){
+            console.log(this.textContent);
+        }
+    </script>
+</body>
+</html>

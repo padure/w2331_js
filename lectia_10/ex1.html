@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <form action="" method="get" id="formularElev" class="w-1/4 m-auto mt-30 flex flex-col gap-2">
+        <div class="mb-4">
+            <label for="nume">Nume prenume</label>
+            <input type="text" name="nume" id="nume" required minlength="3" class="w-full border">
+        </div>
+        <div class="mb-4">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required class="w-full border">
+        </div>
+        <button type="submit" class="bg-black text-white py-1 px-6">Înregistrează</button>
+    </form>
+    <script>
+        const formular = document.querySelector("#formularElev");
+        formular.addEventListener("submit", (e) =>{
+            e.preventDefault();
+            // const nume = formular.nume.value;
+            // const email = formular.email.value;
+            // formular.reset();
+            const date = new FormData(formular);
+            const nume  = date.get("nume");
+            const email = date.get("email");
+            if(!formular.checkValidity()){
+                console.log("Campul nume este obligatoriu!");
+            }
+            console.log(formular.reportValidity());
+        });
+    </script>
+</body>
+</html>
