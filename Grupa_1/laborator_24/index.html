@@ -23,15 +23,23 @@
         const booksSection = document.getElementById("books");
         const URL = "http://localhost:3000/books";
         // Functions
-        const display = () => {}
+        const display = (list) => {
+            booksSection.innerHTML = "";
+            list.forEach(el => {
+                booksSection.innerHTML += `<div>
+                    <div>Titlu: ${el.titlu}</div>    
+                </div>`;
+            });
+        }
         const getBooks = async () => {
             const response = await fetch(URL);
             const books = await response.json();
             return books;
         }
         // Main
-        const main = () => {
-
+        const main = async () => {
+            const books = await getBooks();
+            display(books);
         }
         main();
     </script>
