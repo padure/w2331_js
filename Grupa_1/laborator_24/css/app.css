@@ -43,4 +43,10 @@ nav a:hover{
 #books > div{
     border: 1px solid white;
     padding: 2px;
+    display: flex;
+}
+#books > div > img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }

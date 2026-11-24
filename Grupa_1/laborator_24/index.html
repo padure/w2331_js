@@ -27,7 +27,11 @@
             booksSection.innerHTML = "";
             list.forEach(el => {
                 booksSection.innerHTML += `<div>
-                    <div>Titlu: ${el.titlu}</div>    
+                    <div class="body">
+                        <div>Titlu: ${el.titlu}</div>    
+                        <div>Autor: ${el.autor}</div>    
+                    </div>
+                    <img alt="${el.titlu}" src="${el.img}">    
                 </div>`;
             });
         }
