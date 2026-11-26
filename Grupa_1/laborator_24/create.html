@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraria ta online</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="./index.html">Carti</a>
+            <a href="./create.html">Adauga</a>
+            <a href="./cart.html">Cos</a>
+        </nav>
+        <h3 class="form-title">Adauga o carte</h3>
+        <section class="add-book">
+            <form action="#" method="post" id="add-book">
+                <div class="form-group">
+                    <label for="titlu">Titlul cartii</label>
+                    <input type="text" name="titlu" id="titlu" placeholder="Titlu">
+                </div>
+                <div class="form-group">
+                    <label for="autor">Autorul cartii</label>
+                    <input type="text" name="autor" id="autor" placeholder="Autor">
+                </div>
+                <div class="form-group">
+                    <label for="pagini">Numarul de pagini</label>
+                    <input type="number" min="0" name="pagini" id="pagini" placeholder="Pagini" minlength="1">
+                </div>
+                <div class="form-group">
+                    <label for="pret">Pretul cartii</label>
+                    <input type="number" min="0" name="pret" id="pret" placeholder="Pret" minlength="0">
+                </div>
+                <div class="form-group">
+                    <label for="categorie">Categoria cartii</label>
+                    <input type="text" name="categorie" id="categorie" placeholder="categoria">
+                </div>
+                <div class="form-group">
+                    <label for="imagine">Imaginea cartii</label>
+                    <input type="text" name="imagine" id="imagine" placeholder="Imaginea">
+                </div>
+                <button type="submit">Adauga</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const addBook = document.getElementById("add-book");
+        addBook.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const book = {
+                "titlu": e.target.titlu.value,
+                "autor": e.target.autor.value,
+                "pagini": e.target.pagini.value,
+                "pret": e.target.pret.value,
+                "categorie": e.target.categorie.value,
+                "img": e.target.imagine.value
+            }
+            console.log(book);
+        });
+    </script>
+</body>
+
+</html>

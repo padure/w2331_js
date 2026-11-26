@@ -41,8 +41,8 @@ nav a:hover{
     flex-wrap: wrap;
     gap: 5px;
 }
-#books > div{
-    border: 1px solid white;
+#books .card{
+    box-shadow: 0 0 2px white;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -63,4 +63,30 @@ nav a:hover{
     padding: 5px;
     border-radius: 5px;
     font-size: 14px;
+}
+/* Adauga carte */
+#add-book{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.add-book{
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 3px #a5a5a5;
+    padding: 15px;
+}
+.form-title{
+    text-align: center;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form-group input{
+    padding: 3px;
+}
+#add-book button{
+    padding: 3px;
 }
