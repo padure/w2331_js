@@ -26,10 +26,15 @@
         const display = (list) => {
             booksSection.innerHTML = "";
             list.forEach(el => {
-                booksSection.innerHTML += `<div>
+                booksSection.innerHTML += `<div class="card">
                     <div class="body">
                         <div>Titlu: ${el.titlu}</div>    
                         <div>Autor: ${el.autor}</div>    
+                        <div class="categorie">${el.categorie}</div>    
+                        <div>
+                            <b>Pret: ${el.pret}</b>
+                            <b>Pagini: ${el.pagini}</b>
+                        </div>    
                     </div>
                     <img alt="${el.titlu}" src="${el.img}">    
                 </div>`;
